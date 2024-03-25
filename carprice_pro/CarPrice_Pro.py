@@ -5,19 +5,19 @@ import pandas as pd
 class CarPrice_Pro:
     
     def __init__( self ):
-        self.AnoFabricacao_scaler     = pickle.load(open(r'parameter\AnoFabricacao_scaler.pkl', 'rb'))
-        self.AnoModelo_scaler         = pickle.load(open(r'parameter\AnoModelo_scaler.pkl', 'rb'))
-        self.KM_scaler                = pickle.load(open(r'parameter\KM_scaler.pkl', 'rb'))
-        self.df_encoding              = pickle.load(open(r'parameter\df_encoding.pkl', 'rb'))
-        self.Estado_scaler            = pickle.load(open(r'parameter\Estado_scaler.pkl', 'rb'))
-        self.Cidade_scaler            = pickle.load(open(r'parameter\Cidade_scaler.pkl', 'rb'))
-        self.Cambio_scaler            = pickle.load(open(r'parameter\Cambio_scaler.pkl', 'rb'))
-        self.Cor_scaler               = pickle.load(open(r'parameter\Cor_scaler.pkl', 'rb'))
-        self.UnicoDono_scaler         = pickle.load(open(r'parameter\UnicoDono_scaler.pkl', 'rb'))
-        self.IPVAPago_scaler          = pickle.load(open(r'parameter\IPVAPago_scaler.pkl', 'rb'))
-        self.Licenciado_scaler        = pickle.load(open(r'parameter\Licenciado_scaler.pkl', 'rb'))
-        self.Blindado_scaler          = pickle.load(open(r'parameter\Blindado_scaler.pkl', 'rb'))
-        self.TipoVendedor_scaler      = pickle.load(open(r'parameter\TipoVendedor_scaler.pkl', 'rb'))        
+        self.AnoFabricacao_scaler     = pickle.load(open('parameter/AnoFabricacao_scaler.pkl', 'rb'))
+        self.AnoModelo_scaler         = pickle.load(open('parameter/AnoModelo_scaler.pkl', 'rb'))
+        self.KM_scaler                = pickle.load(open('parameter/KM_scaler.pkl', 'rb'))
+        self.df_encoding              = pickle.load(open('parameter/df_encoding.pkl', 'rb'))
+        self.Estado_scaler            = pickle.load(open('parameter/Estado_scaler.pkl', 'rb'))
+        self.Cidade_scaler            = pickle.load(open('parameter/Cidade_scaler.pkl', 'rb'))
+        self.Cambio_scaler            = pickle.load(open('parameter/Cambio_scaler.pkl', 'rb'))
+        self.Cor_scaler               = pickle.load(open('parameter/Cor_scaler.pkl', 'rb'))
+        self.UnicoDono_scaler         = pickle.load(open('parameter/UnicoDono_scaler.pkl', 'rb'))
+        self.IPVAPago_scaler          = pickle.load(open('parameter/IPVAPago_scaler.pkl', 'rb'))
+        self.Licenciado_scaler        = pickle.load(open('parameter/Licenciado_scaler.pkl', 'rb'))
+        self.Blindado_scaler          = pickle.load(open('parameter/Blindado_scaler.pkl', 'rb'))
+        self.TipoVendedor_scaler      = pickle.load(open('parameter/TipoVendedor_scaler.pkl', 'rb'))        
 
     def remove_outliers(self, df, column_name, lower_multiplier=1, upper_multiplier=1):
         Q1 = df[column_name].quantile(0.25)

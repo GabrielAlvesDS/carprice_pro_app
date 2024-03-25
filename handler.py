@@ -5,7 +5,7 @@ import pandas as pd
 from flask import Flask, request, jsonify
 from carprice_pro.CarPrice_Pro import CarPrice_Pro
 
-model = pickle.load(open(r'model\lr_test_model.pkl', 'rb'))
+model = pickle.load(open('model/lr_test_model.pkl', 'rb'))
 
 # Criar uma instância da classe Flask
 app = Flask(__name__)
